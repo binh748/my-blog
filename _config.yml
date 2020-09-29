@@ -27,7 +27,8 @@ url: "https://binh748.github.io" # the base hostname & protocol for your site, e
 github_username: binh748
 
 # Build settings
-theme: minima
+# Removed minima theme as it is now a regular theme
+# theme: minima
 plugins:
   - jekyll-feed
 
