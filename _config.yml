@@ -10,20 +10,20 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-theme                    : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme             : "mmistakes/minimal-mistakes@4.20.2" 
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Binh Hoang"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Binh Hoang"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : /my-blog
-repository               : binh748/my-blog
+url                      : "https://binh748.github.io/my-blog/"
+baseurl                  : "/my-blog"
+repository               : "binh748/my-blog"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Binh Hoang"
-  avatar           : "/assets/images/tmp-blog-prof-pic.jpg"
+  avatar           : "https://user-images.githubusercontent.com/62628676/94503791-49a2cd00-01d5-11eb-9157-14e377320341.jpg"
   bio              : "Data scientist transitioning from finance"
   location         : "New York City"
   email            : binh.hoang7@gmail.com
