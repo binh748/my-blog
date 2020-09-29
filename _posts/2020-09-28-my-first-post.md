@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "My first post"
 date:   2020-09-28 16:21:34 -0400
 categories: jekyll update
