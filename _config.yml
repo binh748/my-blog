@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Binh Hoang"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "My data science journey"
 name                     : "Binh Hoang"
-description              : "An amazing website."
+description              : "My blog for all things data science."
 url                      : "https://binh748.github.io/my-blog/"
 baseurl                  : "/my-blog"
 repository               : "binh748/my-blog"
@@ -51,7 +51,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Binh Hoang"
   avatar           : "https://user-images.githubusercontent.com/62628676/94503791-49a2cd00-01d5-11eb-9157-14e377320341.jpg"
-  bio              : "Data scientist transitioning from finance. Relaxes by watching anime."
+  bio              : "Data scientist transitioning from finance. Loves tea and anime."
   # location         : "New York City"
   email            : binh.hoang7@gmail.com
   links:
@@ -133,7 +133,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/binh748"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -281,5 +281,5 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
-      related: true
+      share: false
+      related: false

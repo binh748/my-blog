@@ -24,6 +24,7 @@ My anime recommender combines content-based and collaborative filtering. The dat
 I deployed my recommender on a Flask app. The app allows users to choose how adventurous they want their recommendations to be. Setting the recommendation type to "more adventurous" will show the user more collaborative filtering recommendations whereas setting the recommendation type to “less adventurous” will show the user more content-based filtering recommendations. By allowing users to select their recommendation type, they have optionality in finding recommendations that fit their preferences.
 
 ![Flask home page](https://user-images.githubusercontent.com/62628676/93408976-d78cc880-f863-11ea-9978-c921b2a56945.png)
+
 ![Flask recommender page](https://user-images.githubusercontent.com/62628676/93409135-33efe800-f864-11ea-9c10-0396cda3428d.png)
 <span style="font-size: .8em; font-style: italic;">Screenshots of my Flask app.</span>
 
@@ -57,7 +58,12 @@ Two well-known ways to build a recommender system are content-based and collabor
 
 When I first learned about these two filtering techniques during the bootcamp, I wanted to figure out how I could combine the two in my anime recommender. The way I did it was I got recommendations independently from both filtering techniques and then scored those recommendations based on user input on how adventurous they want their recommendations to be. If the user wants more adventurous (i.e. more diverse) recommendations, the content-based filtering recommendations will be weighed higher and vice versa.
 
-I think letting users choose their recommendation type can provide a better user experience. It definitely made me wonder, though, why the streaming platforms I have subscriptions to (e.g. Netflix, Crunchyroll) don’t have such a feature. Maybe it’s because my assumption is wrong and that most users don’t care about being able to choose their recommendation preferences (I wouldn’t be one of those users, though!). Regardless, I built this recommender for my own enjoyment and with my own vision for how a recommender should work—if I were building this recommender for a company, I definitely would do testing to validate my assumptions.
+I think letting users choose their recommendation type can provide a better user experience. It definitely made me wonder, though, why the streaming platforms I have subscriptions to (e.g. Netflix, Crunchyroll) don’t have such a feature.
+
+![Crunchyroll’s recommendations for me](https://user-images.githubusercontent.com/62628676/94749921-f2c30200-0352-11eb-8da4-911a25323f79.png)
+<span style="font-size: .8em; font-style: italic;">These are the anime recommendations I get on Crunchyroll, but there’s no option to change the recommendation type.</span>
+
+Maybe it’s because my assumption is wrong, and most users don’t care about being able to choose their recommendation preferences (I wouldn’t be one of those users, though!). Regardless, I built this recommender for my own enjoyment and with my own vision for how a recommender should work—if I were building this recommender for a company, I definitely would do testing to validate my assumptions.
 
 ## Conclusion
 I learned a lot from this project: how to build a Docker container, leverage Google Cloud instances, create a recommender using both content-based and collaborative-filtering, and build a Flask app. Though there were definitely some days where I was banging my head, I kept motivated because I did the project on something I love: anime.
@@ -66,4 +72,4 @@ Unfortunately, it’s not possible for me to test my recommender full-scale to s
 
 Maybe one day I’ll be a data scientist at Crunchyroll helping them improve their recommender system. If my favorite anime characters can accomplish their dreams, so can I.
 
-All code available here: [GitHub](https://github.com/binh748/anime-recommender)
+All code on [GitHub](https://github.com/binh748/anime-recommender).
