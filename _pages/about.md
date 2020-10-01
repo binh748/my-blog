@@ -7,11 +7,11 @@ layout: archive
 
 I'm a data scientist transitioning from finance. Before jumping into data science, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
 
-Clear and informative data visualizations make me happy. It's one of the reasons I love data science. 
+Clear and informative data visualizations make me happy. It's one of the reasons I love data science.
 
 In my free time, I'm a community organizer with [GAPIMNY](http://gapimny.org/), a NYC queer and trans Asian Pacific Islander community organization.
 
-I graduated from Yale University with a B.A. in humanities.
+I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities.
 
 ## Projects:
 * [User-Empowered Anime Recommender System](https://github.com/binh748/anime-recommender)
