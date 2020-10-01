@@ -78,4 +78,6 @@ Maybe one day I’ll be a data scientist at Crunchyroll helping them improve the
 
 All code on [GitHub](https://github.com/binh748/anime-recommender).
 
+Presentation recording [here](https://www.youtube.com/watch?v=R3QIN05TJIQ&feature=youtu.be).
+
 ![Naruto smiling](https://wallpaperaccess.com/full/1400551.jpg)
