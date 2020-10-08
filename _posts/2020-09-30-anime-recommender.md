@@ -1,5 +1,5 @@
 ---
-title: "Anime Recommender"
+title: "Anime recommender: giving users choice"
 categories:
   - Blog
 tags:
