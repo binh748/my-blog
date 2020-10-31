@@ -27,10 +27,8 @@ To build my user/anime embeddings in content-based filtering, I hand-selected th
 
 I deployed my recommender on a Flask app. The app allows users to choose how adventurous (i.e. diverse) they want their recommendations to be. Setting the recommendation type to "more adventurous" will show the user more collaborative filtering recommendations whereas setting the recommendation type to “less adventurous” will show the user more content-based filtering recommendations. By allowing users to select their recommendation type, they have optionality in finding recommendations that fit their preferences.
 
-![Flask home page](https://user-images.githubusercontent.com/62628676/93408976-d78cc880-f863-11ea-9978-c921b2a56945.png)
-
-![Flask recommender page](https://user-images.githubusercontent.com/62628676/93409135-33efe800-f864-11ea-9c10-0396cda3428d.png)
-<span style="font-size: .8em; font-style: italic;">Screenshots of my Flask app.</span>
+[![A demonstration of my anime recommender system's Flask app.](https://user-images.githubusercontent.com/62628676/97792286-b8978b00-1bb2-11eb-8a9d-7df79a578d28.png)](http://www.youtube.com/watch?v=gIjnmhQGLa4 "anime-recommender-flask-app-demo")
+<span style="font-size: .8em; font-style: italic;">Click image above to see a screen recording of my Flask app.</span>
 
 ## Challenges
 #### Web Scraping
