@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Binh Hoang"
 title_separator          : "-"
-subtitle                 : "An anime data nerd"
+subtitle                 : "Data science + anime"
 name                     : "Binh Hoang"
 description              : "My blog for all things data science."
 url                      : "https://binh748.github.io/my-blog/"
@@ -30,9 +30,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "binh748"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Binh Hoang"
   avatar           : "https://user-images.githubusercontent.com/62628676/97505767-da450800-194f-11eb-8765-aff235a37904.jpg"
-  bio              : "Data scientist transitioning from finance. Watches anime while drinking tea."
+  bio              : "Data scientist transitioning from finance. Praying for Stars Align season 2."
   # location         : "New York City"
   email            : binh.hoang7@gmail.com
   links:
@@ -285,5 +285,5 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: false
+      share: true
       related: false

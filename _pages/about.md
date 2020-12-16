@@ -13,7 +13,8 @@ In my free time, I'm a community organizer with [GAPIMNY](http://gapimny.org/), 
 
 I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities.
 
-## Projects:
+## Project GitHubs:
+* [SARIMA Time Series Modeling of Superstore Sales](https://github.com/binh748/superstore-sales)
 * [User-Empowered Anime Recommender System](https://github.com/binh748/anime-recommender)
 * [Sentiment Analysis of Queer and Trans Asian Pacific Islander Blogs](https://github.com/binh748/queer-asian-stories)
 * [Optimizing Flight Choices for Punctuality](https://github.com/binh748/flight-classification)

@@ -1,15 +1,18 @@
 ---
-title: "Anime recommender: giving users choice"
+title: "Anime recommender: give users flexibility"
 categories:
   - Blog
 tags:
   - anime
+  - python
   - recommender system
   - flask
   - cloud
   - docker
   - collaborative filtering
   - content-based filtering
+  - web scraping
+excerpt: "I’ve been watching anime since I was a kid, but for most of my life, I had been cautious about letting people know I love anime."
 ---
 I’ve been watching anime since I was a kid, but for most of my life, I had been cautious about letting people know I love anime. It was only until I moved to New York City after college that I began to shed my insecurity and embrace my anime-loving self.
 

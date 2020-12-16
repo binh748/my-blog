@@ -1,15 +1,17 @@
 ---
-title: "Optimizing flight choices for punctuality"
+title: "Optimizing flight choices for punctuality (classification)"
 categories:
   - Blog
 tags:
   - logistic regression
+  - classification
+  - python
   - flights
-  - SQL
   - PostgreSQL
   - API
   - class imbalance
   - travel tips
+except: "One of my greatest joys in life is traveling (and I certainly miss it during the pandemic)."
 ---
 One of my greatest joys in life is traveling (and I certainly miss it during the pandemic). My mom tells me in Vietnamese that I was born with “running feet”. Unfortunately, I can’t remember what the Vietnamese expression she used was, so I’ll have to ask her again one day. The thing is I like traveling when my feet are on the ground, not when they’re in the air. I think flying is a pain (maybe I’ll change my mind when I fly business class, but that’s not happening anytime soon), and it becomes even more of a pain if my flight is delayed or cancelled. I tremble when I think back to when my partner and I discovered that our flights back to New York City from Puerto Vallarta, Mexico were cancelled because of Hurricane Harvey. When I found a 2015 U.S. flights dataset on Kaggle that’s used to classify whether a flight is delayed or not, I thought this would be the perfect classification project for me and maybe I can learn a thing or two about how to optimize my flight choices for punctuality.
 
