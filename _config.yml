@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Binh Hoang"
 title_separator          : "-"
-subtitle                 : "Data science + anime"
+subtitle                 : "Data science + sprinkle of anime"
 name                     : "Binh Hoang"
-description              : "My blog for all things data science."
+description              : "Binh's data science blog."
 url                      : "https://binh748.github.io/my-blog/"
 baseurl                  : "/my-blog"
 repository               : "binh748/my-blog"
@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Binh Hoang"
+  name             : "Binh (he/him)"
   avatar           : "https://user-images.githubusercontent.com/62628676/97505767-da450800-194f-11eb-8765-aff235a37904.jpg"
   bio              : "Data scientist transitioning from finance. Praying for Stars Align season 2."
   # location         : "New York City"

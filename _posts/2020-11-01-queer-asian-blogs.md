@@ -16,6 +16,13 @@ tags:
   - NLTK
 excerpt: "As part of my community organizing work with GAPIMNY, I'm an editor of a tumblr called the Gaysian Diaries."
 ---
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Summary](#summary)
+3. [Challenges](#challenges)
+4. [Conclusion](#conclusion)
+
+## Introduction
 As part of my community organizing work with [GAPIMNY](http://www.gapimny.org), I’m an editor of a tumblr called the [Gaysian Diaries](https://gaysiandiaries.com). The Gaysian Diaries posts monthly stories from queer and trans Asian Pacific Islanders (API): by sharing these stories, others in the community can connect, learn, and feel less alone. I have also contributed to the Gaysian Diaries, having written a couple posts. There’s a similar tumblr called the [Gaysian Third Space](https://gaysianthirdspace.com), and I’m friends with the creators.
 
 These blogs made a unique dataset for my Metis NLP/unsupervised learning project. I was curious to see what insights I could discover considering I already know the blogs well. This was my most personal project yet.

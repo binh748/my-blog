@@ -14,6 +14,13 @@ tags:
   - web scraping
 excerpt: "I’ve been watching anime since I was a kid, but for most of my life, I had been cautious about letting people know I love anime."
 ---
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Summary](#summary)
+3. [Challenges](#challenges)
+4. [Conclusion](#conclusion)
+
+# Introduction
 I’ve been watching anime since I was a kid, but for most of my life, I had been cautious about letting people know I love anime. It was only until I moved to New York City after college that I began to shed my insecurity and embrace my anime-loving self.
 
 To get into the Metis data science bootcamp, I interviewed with a Metis alum who asked me what I wanted to do for my passion project, which is the last project that a student does to complete their 5-project portfolio. I answered confidently and without shame that I wanted to build an anime recommender system.
