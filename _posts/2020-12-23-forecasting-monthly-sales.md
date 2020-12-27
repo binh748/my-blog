@@ -8,7 +8,7 @@ tags:
   - Python
   - time series
   - statsmodels
-excerpt:
+excerpt: "After bootcamp, I committed myself to continue learning and keeping my skills sharp by continuing to do projects. For my first post-bootcamp project, I wanted to revisit time series modeling, learn it more in-depth, and build my own time series model."
 ---
 <style type="text/css">
   .tg {
