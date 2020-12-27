@@ -10,6 +10,15 @@ tags:
   - statsmodels
 excerpt:
 ---
+<style type="text/css">
+  .tg {
+    width: fit-content;
+    margin: auto;
+  }
+  .tg-c3ow {
+    text-align: center;
+  }
+</style>
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [SARIMA Models Explained](#sarima-models-explained)
@@ -65,11 +74,31 @@ $$ M_t = \mu + \varepsilon_t + 0.5\varepsilon_{t-1} $$
 
 <span style="font-size: .8em; font-style: italic; display: block;">MA-1 model for monthly manga sales.</span>
 
-| $t$ | $\hat{M_t}$ | $\varepsilon_t$ |  $M_t$ |
-|:---:|:-----------:|:---------------:|:------:|
-|  1  |    10,000   |      10,000     | 20,000 |
-|  2  |    15,000   |      1,000      | 16,000 |
-
+<table class="tg">
+  <thead>
+    <tr>
+      <th class="tg-c3ow">$t$</th>
+      <th class="tg-c3ow">$\hat{M_t}$</th>
+      <th class="tg-c3ow">$\varepsilon_t$</th>
+      <th class="tg-c3ow">$M_t$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tg-c3ow">1</td>
+      <td class="tg-c3ow">10,000</td>
+      <td class="tg-c3ow">10,000</td>
+      <td class="tg-c3ow">20,000</td>
+    </tr>
+    <tr>
+      <td class="tg-c3ow">2</td>
+      <td class="tg-c3ow">15,000</td>
+      <td class="tg-c3ow">1,000</td>
+      <td class="tg-c3ow">16,000</td>
+    </tr>
+  </tbody>
+</table>
+<br>
 <span style="font-size: .8em; font-style: italic; display: block;">\\(\hat{M_t}\\) is predicted manga sales, \\(\varepsilon_t\\) is the error, and \\(M_t\\) is true manga sales.</span>
 
 The manga example works because 1) I used the mean to initialize my first prediction, which allowed me to calculate my first error and 2) I already had a fitted MA model to work with. But how do I fit a MA model? This is where things get more complicated. Looking at the equation for a MA model, you may think it’s a linear model since it uses a linear combination of terms just like the AR model, but it’s not! The reason it’s not linear is because the lagged error terms are not observed, which means we can’t use OLS and gradient descent to fit a MA model.
@@ -96,7 +125,6 @@ In the figure below of monthly sales, there is a clear seasonal pattern: the hig
 
 ![monthly-superstore-sales](https://user-images.githubusercontent.com/62628676/103041681-1ad29380-4545-11eb-847a-7c66f38b2034.png)
 <span style="font-size: .8em; font-style: italic; display: block;">Monthly sales are highest in November and December, indicating seasonality.</span>
-
 
 To check if the monthly sales are stationary, I used three different checks. First, I applied a visual check where I plotted the original time series against the 12-month rolling mean and 12-month rolling standard deviation to see if the rolling mean and standard deviation stay constant. In the figure below, the rolling standard deviation appears constant, but the rolling mean does have an upward trend starting in mid-2017. The next check was a standard deviation check. The differenced time series with the lowest standard deviation is usually the most stationary. I calculated the standard deviation for zero up to three orders of differencing: the standard deviation with zero orders of differencing was the lowest. Finally, I ran the Dickey-Fuller test, which is the most statistically rigorous method to determine stationarity. The null hypothesis of the Dickey-Fuller test is that the time series is not stationary. The p-value for my Dickey-Fuller test was 0.000278, well below the standard 0.05 significance level; thus, I rejected the null hypothesis in favor of the alternative that the time series is stationary.
 
