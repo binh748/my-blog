@@ -4,14 +4,15 @@ categories:
   - Blog
 tags:
   - anime
-  - python
+  - Python
   - recommender system
-  - flask
+  - Flask
   - cloud
-  - docker
+  - Docker
   - collaborative filtering
   - content-based filtering
   - web scraping
+  - Google Cloud Compute Engine
 excerpt: "I’ve been watching anime since I was a kid, but for most of my life, I had been cautious about letting people know I love anime."
 ---
 ## Table of Contents
@@ -26,7 +27,7 @@ I’ve been watching anime since I was a kid, but for most of my life, I had bee
 To get into the Metis data science bootcamp, I interviewed with a Metis alum who asked me what I wanted to do for my passion project, which is the last project that a student does to complete their 5-project portfolio. I answered confidently and without shame that I wanted to build an anime recommender system.
 
 ![Ookiku Furikabutte funny picture](https://wallpapercave.com/wp/wp5109395.jpg)
-<span style="font-size: .8em; font-style: italic;">One of my favorite anime about a high school baseball team with big hearts and big dreams: Ookiku Furikabutte.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">One of my favorite anime about a high school baseball team with big hearts and big dreams: Ookiku Furikabutte.</span>
 
 ## Summary
 My anime recommender combines content-based and collaborative filtering. At a high level, content-based filtering tends to recommend similar anime to the anime the user has watched while collaborative-based filtering tends to recommend more diverse anime.
@@ -38,7 +39,7 @@ To build my user/anime embeddings in content-based filtering, I hand-selected th
 I deployed my recommender on a Flask app. The app allows users to choose how adventurous (i.e. diverse) they want their recommendations to be. Setting the recommendation type to "more adventurous" will show the user more collaborative filtering recommendations whereas setting the recommendation type to “less adventurous” will show the user more content-based filtering recommendations. By allowing users to select their recommendation type, they have optionality in finding recommendations that fit their preferences.
 
 [![A demonstration of my anime recommender system's Flask app.](https://user-images.githubusercontent.com/62628676/97792286-b8978b00-1bb2-11eb-8a9d-7df79a578d28.png)](http://www.youtube.com/watch?v=gIjnmhQGLa4 "anime-recommender-flask-app-demo")
-<span style="font-size: .8em; font-style: italic;">Click image above to see a screen recording of my Flask app.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">Click image above to see a screen recording of my Flask app.</span>
 
 ## Challenges
 #### Web Scraping
@@ -48,14 +49,14 @@ I had done web scraping for my regression and NLP/unsupervised learning Metis pr
 To speed things up, I learned how to deploy my web scraper across four Google Cloud Compute Engine instances in addition to my laptop. Learning how to do that was no easy task. First, I had to learn how to build a Docker container that would install all the Python/package dependencies for my web scraping script and run the script. I toiled away for a few days figuring out Docker, and then once I got my container up and running in the cloud, my web scraping script would run for a bit and then crash…
 
 ![Defeated pusheen](https://www.clipartkey.com/mpngs/m/34-344284_pusheen-cat-clipart-lazy-lazy-pusheen.png)
-<span style="font-size: .8em; font-style: italic;">What I felt like when my Docker container wasn't working.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">What I felt like when my Docker container wasn't working.</span>
 
 After some frantic Googling, I found out that because I was using Selenium and a headless Chrome driver to web scrape, I needed to allocate more shared memory to my Docker container than the default 64 mb. That did the trick (I ended up upping the shared memory to 12 gb—maybe a bit overkill, but I wanted to be extra safe).
 
 So what happened to the 3.75 days? Well, if you only count the time that the web scraper was running, I was able to do it all in one day. However, learning how to use Docker took a few days in itself, so in total, it still took about 3.75 days to get all the data. Womp (a favorite expression of mine). I came full circle, but now I know how to use Docker and the cloud, so I’m smiling. :smile:
 
 ![Gon Freecs smiling](https://carboncostume.com/wordpress/wp-content/uploads/2017/08/gon-freecs.jpg)
-<span style="font-size: .8em; font-style: italic;">Gon is better at smiling than me.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">Gon is better at smiling than me.</span>
 
 #### Flask
 
@@ -73,7 +74,7 @@ When I first learned about these two filtering techniques during the bootcamp, I
 I think letting users choose their recommendation type can provide a better user experience. It definitely made me wonder, though, why the streaming platforms I have subscriptions to (e.g. Netflix, Crunchyroll) don’t have such a feature.
 
 ![Crunchyroll’s recommendations for me](https://user-images.githubusercontent.com/62628676/94749921-f2c30200-0352-11eb-8da4-911a25323f79.png)
-<span style="font-size: .8em; font-style: italic;">These are the anime recommendations I get on Crunchyroll, but there’s no option to change the recommendation type.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">These are the anime recommendations I get on Crunchyroll, but there’s no option to change the recommendation type.</span>
 
 Maybe it’s because my assumption is wrong, and most users don’t care about being able to choose their recommendation type (I wouldn’t be one of those users, though!). Regardless, I built this recommender for my own enjoyment and with my own vision for how a recommender should work—if I were building this recommender for a company, I would do testing to validate my assumptions.
 

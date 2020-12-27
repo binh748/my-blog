@@ -73,7 +73,7 @@ SELECT
  ORDER BY RANDOM()
  LIMIT 100000;
 ```
-<span style="font-size: .8em; font-style: italic;">This is the query I used to join the tables together and pull a random sample of 100,000 flights to model in Python.</span>
+<span style="font-size: .8em; font-style: italic; display: block;">This is the query I used to join the tables together and pull a random sample of 100,000 flights to model in Python.</span>
 
 The other challenge I had was finding a trustworthy weather dataset to add to my model. There are a bunch of weather APIs out there, and I was almost going to use a free one until I saw that the site was not secure. My partner is a cybersecurity engineer and has rightfully scared the bejeezus out of me regarding unsecure websites.
 

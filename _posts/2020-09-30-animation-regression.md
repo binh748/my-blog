@@ -4,7 +4,7 @@ categories:
   - Blog
 tags:
   - linear regression
-  - python
+  - Python
   - regression
   - animated films
   - japan
@@ -52,7 +52,7 @@ My Japan model didn’t perform well because of challenges I encountered in the 
 3. **Presentation:** I cringe when I look back at my PowerPoint presentation for this project because, without mincing words, it’s bad. I rarely made slide decks at D. E. Shaw, so it’s not a skill I’ve developed much professionally. If you look at the slide below, you can see why my Metis instructors gave me a lot of feedback on my presentation. As I watched my Metis peers present their regression projects, I was amazed by how many of them had incredible PowerPoint/data visualization skills. It inspired me so much that when Metis instructor Alice Zhao gave her lecture on presentations and data visualizations, I sat there like a student in the front row of class (it was a Zoom lecture), taking notes on everything she said. I’m happy to say that I’ve come a long way since this presentation. On Metis graduation day, the instructors took turns singing the praises of each student. When it was my turn, my instructor noted how since my regression project, I aimed to improve my presentation skills. I had come a long way she said and I should be proud of myself. That compliment made my day. :smile:
 
 ![bad animation regression slide](https://user-images.githubusercontent.com/62628676/102298524-46d78e80-3f1f-11eb-857c-aa2fd7c3ddc3.png)
-<span style="font-size: .8em; font-style: italic;">Using text to explain numerical relationships is not the way to go!</span>
+<span style="font-size: .8em; font-style: italic; display: block;">Using text to explain numerical relationships is not the way to go!</span>
 
 Below are the lessons I learned above in a tl;dr format:
 
