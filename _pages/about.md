@@ -11,7 +11,9 @@ In my free time, I'm a community organizer with [GAPIMNY](http://gapimny.org/), 
 
 My favorite anime is [Stars Align (星合の空)](https://myanimelist.net/anime/37972/Hoshiai_no_Sora).
 
-I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities. Here's my [resume](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume2.7.pdf).
+I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities.
+
+Here's my [resume](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume1.9.pdf).
 
 ## Project GitHubs:
 * [SARIMA Time Series Modeling of Superstore Sales](https://github.com/binh748/superstore-sales)
