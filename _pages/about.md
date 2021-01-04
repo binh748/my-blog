@@ -5,7 +5,7 @@ author_profile: true
 layout: archive
 ---
 
-Hi, I'm Binh (he/him)! I'm transitioning into data science from finance. I completed the [Metis](https://www.thisismetis.com/) NYC summer data science bootcamp in 2020. Before jumping into data science, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
+Hi, I'm Binh (he/him). I'm transitioning into data science from finance. I completed the [Metis](https://www.thisismetis.com/) NYC summer data science bootcamp in 2020. Before jumping into data science, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
 
 In my free time, I'm a community organizer with [GAPIMNY](http://gapimny.org/), a NYC queer and trans Asian Pacific Islander community organization.
 

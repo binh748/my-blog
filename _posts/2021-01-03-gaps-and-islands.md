@@ -7,7 +7,7 @@ tags:
   - LeetCode
   - debugging
   - gaps and islands
-excerpt: "I first encountered the 'gaps and islands' problem while doing SQL problems on Leetcode."
+excerpt: "I first encountered the \"gaps and islands\" problem while doing SQL problems on Leetcode."
 ---
 # Table of Contents
 1. [Introduction](#introduction)
@@ -16,9 +16,9 @@ excerpt: "I first encountered the 'gaps and islands' problem while doing SQL pro
 4. [Conclusion](#conclusion)
 
 # Introduction
-Up to this point, my posts have been about my data science projects. With 2021 starting, I want to add new types of posts where I discuss a specific data science/coding problem I’ve encountered, the nuances of the problem, and how I solved it. Let’s jump right in! 
+Up to this point, my posts have been about my data science projects. With 2021 starting, I want to add new types of posts where I discuss a specific data science/coding problem I’ve encountered, the nuances of the problem, and how I solved it. Let’s jump right in!
 
-I first encountered the “gaps and islands” problem while doing SQL problems on LeetCode. The problem occurs when you want to identify groups of consecutive data that meet certain criteria (“islands”) and the gaps that exist in between those groups (“gaps”). The gaps could be due to missing data or consecutive data that do not meet certain criteria.
+I first encountered the "gaps and islands" problem while doing SQL problems on LeetCode. The problem occurs when you want to identify groups of consecutive data that meet certain criteria (“islands”) and the gaps that exist in between those groups (“gaps”). The gaps could be due to missing data or consecutive data that do not meet certain criteria.
 
 I learned how to solve this problem using a grouping technique that’s explained in a number of resources online, but what I found out in doing more of these problems is that the resources don’t address a corner case where the grouping numbers for the islands and gaps can overlap, causing a bug in the solution.
 
@@ -35,9 +35,9 @@ The tricky thing about this problem is figuring out how to identify the active u
 
 I wasn’t able to figure it out on my own, so I read the following resources to familiarize myself with how to tackle this type of problem, which as you can guess is a gaps and islands problem:
 
-[LeetCode user adrianlievano1993’s explanation](https://leetcode.com/problems/active-users/discuss/644070/100-Faster-than-Submissions-Window-Functions-Documentation-Linked)
-[Matt Boegner’s blog post explanation](https://mattboegner.com/improve-your-sql-skills-master-the-gaps-islands-problem/)
-[StackOverflow user GarethD’s explanation](https://stackoverflow.com/questions/26117179/sql-count-consecutive-days)
+1. [LeetCode user adrianlievano1993’s explanation](https://leetcode.com/problems/active-users/discuss/644070/100-Faster-than-Submissions-Window-Functions-Documentation-Linked)
+2. [Matt Boegner’s blog post explanation](https://mattboegner.com/improve-your-sql-skills-master-the-gaps-islands-problem/)
+3. [StackOverflow user GarethD’s explanation](https://stackoverflow.com/questions/26117179/sql-count-consecutive-days)
 
 Here’s the basic outline of the solution, which I’ll later go into more detail on:
 
@@ -66,7 +66,7 @@ grouping_info_cte AS (
       FROM grouping_cte
      GROUP BY id, groupings
     HAVING DATEDIFF(MAX(login_date), MIN(login_date)) + 1 >= 5
-    ORDER BY id, start_date
+     ORDER BY id, start_date
 )
 SELECT DISTINCT g.id, a.name
   FROM grouping_info_cte AS g
@@ -150,7 +150,7 @@ I add a column called groupings by subtracting the rankings from the id column. 
 
 However, if you look at the table below, grouping #2 has a low_traffic record grouped together with the high_traffic records. That’s possible due to chance: if the ids and rankings for the statuses align a certain way, the low_traffic and high_traffic records could have the same grouping number. This is not desired behavior, and this is what causes the bug. I’ll come back to this point.
 
-```
+```sql
 grouping_cte AS (
     SELECT *, id - rankings AS groupings
       FROM dense_rank_cte
@@ -171,8 +171,8 @@ agg_cte AS (
 )
 ```
 
-![stadium-table-cte-4](https://user-images.githubusercontent.com/62628676/103492183-16d12c00-4df7-11eb-8c6a-081504a825c5.png)
-
+![stadium-table-cte-4](https://user-images.githubusercontent.com/62628676/103493548-0ec9ba00-4e00-11eb-9712-2162d3a670cd.png)
+ 
 ### Main query
 Finally, I SELECT the id, visit_date, and people for the records that belong in grouping #2 (that’s the only grouping that satisfies the solution criteria) and ORDER BY visit_date. This should give us the answer if it were not for the bug in CTE #3. Because of the bug, my answer also returns the id, visit_date, and people from id 4 because it’s part of grouping #2 even though it’s a low_traffic record.
 
@@ -250,6 +250,7 @@ SELECT id, visit_date, people
 ```
 <span style="font-size: .8em; font-style: italic; display: block;">This is the full solution with the sustainable fix.</span>
 
-
 # Conclusion
 Now whenever you encounter a gaps and islands problem, you’ll know how to solve it and won’t make the same mistake I made. I hope I was able to expand the universe of data science knowledge just a tiny bit with this post.
+
+All code on [GitHub](https://github.com/binh748/leetcode-problems/blob/main/sql_solutions.sql).
