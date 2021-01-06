@@ -5,15 +5,15 @@ author_profile: true
 layout: archive
 ---
 
-Hi, I'm Binh (he/him). I'm transitioning into data science from finance. I completed the [Metis](https://www.thisismetis.com/) NYC summer data science bootcamp in 2020. Before jumping into data science, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
+Hello! I'm Binh (he/him). I'm working toward my goal of becoming the best data scientist I can be.
 
-In my free time, I'm a community organizer with [GAPIMNY](http://gapimny.org/), a NYC queer and trans Asian Pacific Islander community organization.
+I completed the [Metis](https://www.thisismetis.com/) NYC data science bootcamp in summer 2020. Before Metis, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
 
-My favorite anime is [Stars Align (星合の空)](https://myanimelist.net/anime/37972/Hoshiai_no_Sora).
+My favorite anime is [Stars Align (星合の空)](https://myanimelist.net/anime/37972/Hoshiai_no_Sora), and I hope there will be a season 2. I'm also looking forward to [The Promised Neverland (約束のネバーランド) season 2](https://myanimelist.net/anime/39617/Yakusoku_no_Neverland_2nd_Season).
 
 I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities.
 
-Here's my [resume](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume1.9.pdf).
+[Binh's Resume](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume1.9.pdf)
 
 ## Project GitHubs:
 * [SARIMA Time Series Modeling of Superstore Sales](https://github.com/binh748/superstore-sales)
