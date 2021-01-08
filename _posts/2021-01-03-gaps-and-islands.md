@@ -4,7 +4,7 @@ categories:
   - Blog
 tags:
   - SQL
-  - LeetCode
+  - leetcode
   - debugging
   - gaps and islands
 excerpt: "I first encountered the \"gaps and islands\" problem while doing SQL problems on Leetcode."
@@ -247,7 +247,7 @@ SELECT id, visit_date, people
  WHERE groupings_diff IN (SELECT groupings_diff FROM agg_cte)
  ORDER BY visit_date;
 ```
-<span style="font-size: .8em; font-style: italic; display: block;">This is the full solution with the sustainable fix.</span>
+<span class="caption">This is the full solution with the sustainable fix.</span>
 
 # Conclusion
 Now whenever you encounter a gaps and islands problem, you’ll know how to solve it and won’t make the same mistake I made. I hope I was able to expand the universe of data science knowledge just a tiny bit with this post.

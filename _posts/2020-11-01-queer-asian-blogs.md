@@ -4,15 +4,15 @@ categories:
   - Blog
 tags:
   - queer
-  - Python
+  - python
   - trans
   - asian
   - blog
   - natural language processing
   - unsupervised learning
-  - Plotly
+  - plotly
   - VADER
-  - Spacy
+  - spacy
   - NLTK
 excerpt: "As part of my community organizing work with GAPIMNY, I'm an editor of a tumblr called the Gaysian Diaries."
 ---
@@ -27,8 +27,6 @@ As part of my community organizing work with [GAPIMNY](http://www.gapimny.org), 
 
 These blogs made a unique dataset for my Metis NLP/unsupervised learning project. I was curious to see what insights I could discover considering I already know the blogs well. This was my most personal project yet.
 
-![Pusheen investigating](https://64.media.tumblr.com/50a9ea1e5cd61aa43466f29737bb5047/tumblr_naw3jssQSq1qhy6c9o3_400.gifv)
-
 ## Summary
 I had considered various avenues of analyses such as using Google Analytics or creating a word embedding model, but in the end, I chose to do topic modeling and sentiment analysis. I scraped close to 400 blog posts from tumblr using BeautifulSoup and stored the data in MongoDB. I then used NLTK and Spacy to do the text pre-processing and tf-idf vectorizer to vectorize my documents. To perform topic modeling, I used non-negative matrix factorization (NMF) to get eight topics such as body image, family, and racism and assigned one topic to each blog post based on which topic carried the largest weight. For sentiment analysis, I used the VADER package, which calculates sentiment scores in the range of -1 to 1 where -1 is the most negative sentiment and 1 is the most positive.
 
@@ -36,11 +34,13 @@ I discovered a surprising result from my analysis: the sentiment scores for each
 
 ![All sentiment trend graph](https://user-images.githubusercontent.com/62628676/100012330-16c62100-2da1-11eb-97e1-1fb9143319d2.png)
 ![sentiment trend by topic](https://user-images.githubusercontent.com/62628676/100010363-27c16300-2d9e-11eb-8919-455b522ac64b.png)
-<span style="font-size: .8em; font-style: italic; display: block;">You can see the upward trend in sentiment scores, with the last section being the most positive. This trend is more pronounced in certain topics than others: for example, in the identity topic, you can see a sharp increase in the sentiment score at the end. </span>
+<span class="caption">You can see the upward trend in sentiment scores, with the last section being the most positive. This trend is more pronounced in certain topics than others: for example, in the identity topic, you can see a sharp increase in the sentiment score at the end. </span>
 
 I think this finding points to the resiliency of the writers and perhaps to the community as a whole, that despite the hardships they faced, many hold hope for a better tomorrow.
 
 ![From despair to hope](https://user-images.githubusercontent.com/62628676/95486383-ecd7ad00-0960-11eb-8a22-4f27ebb1f846.png)
+
+<span class="photo-credit">Photo by <a href="https://unsplash.com/@roadtripwithraj?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Road Trip with Raj</a> and <a href="https://unsplash.com/@lephunghia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nghia Le</a> on <a href="https://unsplash.com/@roadtripwithraj?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
 ## Challenges
 I love clean, informative data visualizations. It’s one of the reasons I got hooked into data science in the first place—my eyes light up every time I come across a New York Times’ D3 visualization.
@@ -52,9 +52,6 @@ For this project, I wanted to up my data visualization game by making an interac
 Figuring out how to customize the tooltip took some time as I had to pour through the documentation and get familiar with Plotly’s syntax. (A lot of coding is reading through documentation!). A nice thing is that as I read through more and more documentation of various packages, I get faster at finding the information I need. :smile:
 
 One small frustration I had with Plotly was that it doesn’t allow you to change the location of the x-axis and y-axis labels unlike Seaborn and Matplotlib. I like my x-axis and y-axis labels to look like the below figure since I learned from Metis instructor Alice Zhao that for English-readers, we first read the left-most text; moreover, vertical text, which is how y-axis labels are usually displayed, is difficult to read. I totally agree. No one wants to turn their head to read text, lest they want a stiff neck. Maybe one day Plotly will add such functionality, but until then, I’ll just cry a little inside whenever I see my vertical y-axis labels on Plotly.
-
-![A data viz by Metis instructor Alice Zhao](https://user-images.githubusercontent.com/62628676/95484740-d7fa1a00-095e-11eb-84c5-b5c0d4c19a2c.png)
-<span style="font-size: .8em; font-style: italic; display: block;">This is how I like to align my x-axis and y-axis labels for best readability.</span>
 
 My other visualization challenge was figuring out how to create a sentiment map where color-coded squares represent the sentiment trend of a blog post. The color-coded squares would be ordered top-down, left-right to follow a blog post's sentence order. Some quick searching showed me that no native plot exists, so I had to get creative. I read before that a data scientist is supposed to be a hacker: they should have good enough programming skills to put together whatever they need, be it an app, visualization, or website, even if it may not be production quality.
 

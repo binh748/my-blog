@@ -5,20 +5,11 @@ categories:
 tags:
   - SARIMA
   - ARIMA
-  - Python
+  - python
   - time series
   - statsmodels
 excerpt: "For my first post-bootcamp project, I wanted to revisit time series modeling, learn it more in-depth, and build my own time series model."
 ---
-<style type="text/css">
-  .tg {
-    width: fit-content;
-    margin: auto;
-  }
-  .tg-c3ow {
-    text-align: center;
-  }
-</style>
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [SARIMA Models Explained](#sarima-models-explained)
@@ -36,6 +27,7 @@ I used a SARIMA model for this project, which is an ARIMA model with a seasonal 
 ARIMA is an acronym that stands for Autoregressive Integrated Moving Average. Autoregressive refers to autoregressive models, integrated refers to the orders of differencing, and moving average refers to moving-average models. You may find this strange, but I think of an ARIMA model as cerberus, the three-headed dog that guards the gates of the underworld for Hades: the first head is the autoregressive model (AR), the second head is the orders of differencing (I), and the third head is the moving-average model (MA). These three components are combined into the cute version of Cerberus you see below.
 
 ![arima-cerberus](https://user-images.githubusercontent.com/62628676/103049248-3cd90f80-455f-11eb-81f9-018e3d2fbaf3.png)
+<span class="photo-credit"><a href="https://www.shutterstock.com/g/LAUDiseno">LAUDiseno/Shutterstock.com</a></span>
 
 Let’s go through each ARIMA component, although by no means are my explanations exhaustive. You can take a whole graduate course on time series modeling!
 
@@ -48,7 +40,7 @@ Autoregressive models are linear, so we can use sum of squared errors (OLS) as o
 
 $$ X_t = c + \varphi_{t-1}X_{t-1} + \varphi_{t-2}X_{t-2} + \varepsilon_t $$
 
-<span style="font-size: .8em; font-style: italic;">Equation for an AR-2 model. Note that we use phi for the coefficients in AR models.</span>
+<span class="caption">Equation for an AR-2 model. Note that we use phi for the coefficients in AR models.</span>
 
 ### Integrated
 Integrated refers to the orders of differencing used in an ARIMA model. One order of differencing means we calculate the difference between the adjacent target values, two orders of differencing means we calculate the difference between the one order differencings, and so on. But why and when do we need to use differencing?
@@ -66,13 +58,13 @@ What the moving-average model captures is the randomness (i.e. the stochastic na
 
 $$ X_t = \mu + \varepsilon_t + \theta_{t-1}\varepsilon_{t-1} + \theta_{t-2}\varepsilon_{t-2} $$
 
-<span style="font-size: .8em; font-style: italic;">Equation for an MA-2 model. Note that we use theta for the coefficients in MA models.</span>
+<span class="caption">Equation for an MA-2 model. Note that we use theta for the coefficients in MA models.</span>
 
 Let’s go back to our manga example with a mean of 10,000 monthly sales. If manga sales were 20,000 for a month because of the popular manga convention, but we had predicted that it would be 10,000, then our error would be 10,000. For next month’s prediction, we know that we underestimated last month’s monthly sales, so we’ll incorporate our previous error (let’s assume the previous error’s coefficient, theta, is 0.5) to adjust for that underestimation, so our next month’s prediction is 15,000 compared with next month’s true monthly sales of 16,000. Pretty cool, right?—as we incorporated information from our previous error, our prediction got closer to the true value.
 
 $$ M_t = \mu + \varepsilon_t + 0.5\varepsilon_{t-1} $$
 
-<span style="font-size: .8em; font-style: italic; display: block;">MA-1 model for monthly manga sales.</span>
+<span class="caption">MA-1 model for monthly manga sales.</span>
 
 <table class="tg">
   <thead>
@@ -99,7 +91,7 @@ $$ M_t = \mu + \varepsilon_t + 0.5\varepsilon_{t-1} $$
   </tbody>
 </table>
 <br>
-<span style="font-size: .8em; font-style: italic; display: block;">\\(\hat{M_t}\\) is predicted manga sales, \\(\varepsilon_t\\) is the error, and \\(M_t\\) is true manga sales.</span>
+<span class="caption">\\(\hat{M_t}\\) is predicted manga sales, \\(\varepsilon_t\\) is the error, and \\(M_t\\) is true manga sales.</span>
 
 The manga example works because 1) I used the mean to initialize my first prediction, which allowed me to calculate my first error and 2) I already had a fitted MA model to work with. But how do I fit a MA model? This is where things get more complicated. Looking at the equation for a MA model, you may think it’s a linear model since it uses a linear combination of terms just like the AR model, but it’s not! The reason it’s not linear is because the lagged error terms are not observed, which means we can’t use OLS and gradient descent to fit a MA model.
 
@@ -124,12 +116,12 @@ The data for this project was pulled from [Kaggle](https://www.kaggle.com/rohits
 In the figure below of monthly sales, there is a clear seasonal pattern: the highest monthly sales occur annually in the holiday months of November and December. This means that once I start modeling, I’ll have to use a SARIMA model to capture the seasonality.
 
 ![monthly-superstore-sales](https://user-images.githubusercontent.com/62628676/103041681-1ad29380-4545-11eb-847a-7c66f38b2034.png)
-<span style="font-size: .8em; font-style: italic; display: block;">Monthly sales are highest in November and December, indicating seasonality.</span>
+<span class="caption">Monthly sales are highest in November and December, indicating seasonality.</span>
 
 To check if the monthly sales are stationary, I used three different checks. First, I applied a visual check where I plotted the original time series against the 12-month rolling mean and 12-month rolling standard deviation to see if the rolling mean and standard deviation stay constant. In the figure below, the rolling standard deviation appears constant, but the rolling mean does have an upward trend starting in mid-2017. The next check was a standard deviation check. The differenced time series with the lowest standard deviation is usually the most stationary. I calculated the standard deviation for zero up to three orders of differencing: the standard deviation with zero orders of differencing was the lowest. Finally, I ran the Dickey-Fuller test, which is the most statistically rigorous method to determine stationarity. The null hypothesis of the Dickey-Fuller test is that the time series is not stationary. The p-value for my Dickey-Fuller test was 0.000278, well below the standard 0.05 significance level; thus, I rejected the null hypothesis in favor of the alternative that the time series is stationary.
 
 ![rolling-mean-rolling-std-dev](https://user-images.githubusercontent.com/62628676/103041715-32aa1780-4545-11eb-90a7-76646a1503ef.png)
-<span style="font-size: .8em; font-style: italic; display: block;">Per this visual check, it does not look like the time series is stationary as the rolling standard deviation is constant, but the rolling mean is not.</span>
+<span class="caption">Per this visual check, it does not look like the time series is stationary as the rolling standard deviation is constant, but the rolling mean is not.</span>
 
 Not all the stationarity checks agreed with each other (the visual check showed that the time series was not stationary due to the upward trend in the rolling mean), but the last two checks did concur that the time series was stationary enough. Let’s run with the conclusion for now that the time series of monthly superstore sales, without any orders of differencing, is stationary.
 
@@ -140,7 +132,7 @@ sklearn does provide a class to properly do time series splitting called [TimeSe
 We’re now at the point where I trained my models. Using statsmodel, I created autocorrelation and partial autocorrelation plots (aka ACF and PACF plots where ACF stands for autocorrelation function and PACF stands for partial autocorrelation functions). Knowing how to interpret these plots is absolutely necessary for time series modeling, so let’s do a quick 101. An autocorrelation plot shows the total correlation between the time series and lagged versions of itself for a specified number of lags. For example, an autocorrelation at lag 2 of 0.47 means that if you take the monthly sales and correlate it with monthly sales from two months ago (i.e. if you created a column of monthly sales and correlated it with another column where for each monthly sale, it’s the monthly sales from two months ago), you get a Pearson correlation coefficient of 0.47. The partial autocorrelation plot is the same as the autocorrelation plot except that you remove the indirect correlation between the time series and the lagged version of itself. By indirect correlation, I mean the correlation that is the result of a lagged version being correlated with the next lagged version and so on until you reach the time series. Thus, going back to the example where you have an autocorrelation at lag 2 of 0.47, the partial autocorrelation at lag 2 may only be 0.24 once you remove the indirect correlation that is a byproduct of lag 2 being correlated with lag 1 and lag 1 being correlated with the time series.
 
 ![acf-pacf-plots](https://user-images.githubusercontent.com/62628676/103041926-db587700-4545-11eb-9e96-a2b3ca0fa1e2.png)
-<span style="font-size: .8em; font-style: italic; display: block;">This is what an ACF and PACF plot look like.</span>
+<span class="caption">This is what an ACF and PACF plot look like.</span>
 
 Using the ACF and PACF plots, I referenced [Duke University’s rules](https://people.duke.edu/~rnau/arimrule.htm) on how to fit an SARIMA model. The rules tell you prescriptively how to choose the terms for your SARIMA model based on your ACF and PACF plots. To evaluate my models during the fitting process, I used [AIC (Akaike information criterion)](https://en.wikipedia.org/wiki/Akaike_information_criterion) as my metric; the lower the AIC, the better. I applied the Duke University’s rules until I got the AIC to be as low as it could be. Below you can see the comments in my code on how I applied the rules.
 

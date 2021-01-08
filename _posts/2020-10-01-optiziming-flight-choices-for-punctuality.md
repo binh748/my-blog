@@ -7,12 +7,14 @@ tags:
   - classification
   - python
   - flights
-  - PostgreSQL
+  - postgreSQL
   - API
   - class imbalance
   - travel tips
 excerpt: "One of my greatest joys in life is traveling, and I certainly miss it during the pandemic."
 ---
+
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Summary](#summary)
@@ -23,6 +25,7 @@ excerpt: "One of my greatest joys in life is traveling, and I certainly miss it 
 One of my greatest joys in life is traveling, and I certainly miss it during the pandemic. My mom tells me in Vietnamese that I was born with “running feet”. Unfortunately, I can’t remember what the Vietnamese expression she used was, so I’ll have to ask her again one day. The thing is I like traveling when my feet are on the ground, not when they’re in the air. I think flying is a pain (maybe I’ll change my mind when I fly business class, but that’s not happening anytime soon), and it becomes even more of a pain if my flight is delayed or cancelled. I tremble when I think back to when my partner and I discovered that our flights back to New York City from Puerto Vallarta, Mexico were cancelled because of Hurricane Harvey. When I found a 2015 U.S. flights dataset on Kaggle that’s used to classify whether a flight is delayed or not, I thought this would be the perfect classification project for me and maybe I can learn a thing or two about how to optimize my flight choices for punctuality.
 
 ![plane in the sky](https://images.unsplash.com/photo-1547382806-7c4a0346ee4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)
+<span class="photo-credit">Photo by <a href="https://unsplash.com/@angelacompagnone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Angela Compagnone</a> on <a href="https://unsplash.com/s/photos/plane-in-sky?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
 ## Summary
 I constructed a logistic regression model to predict whether a flight would be delayed. Delay here means that the flight was delayed, diverted, or cancelled. The data for my model came from a sample of 100,000 flights from the 5.8 million flights Kaggle dataset and a weather dataset that I pulled from Visual Crossing Weather’s API.  To evaluate my model, I chose the F1 metric, which is the harmonic mean of precision and recall since I am optimizing for both: I want my model to classify as many of the delayed flights as possible (recall), but to also be accurate in how it's classifying the positive class (precision).
@@ -73,13 +76,14 @@ SELECT
  ORDER BY RANDOM()
  LIMIT 100000;
 ```
-<span style="font-size: .8em; font-style: italic; display: block;">This is the query I used to join the tables together and pull a random sample of 100,000 flights to model in Python.</span>
+<span class="caption">This is the query I used to join the tables together and pull a random sample of 100,000 flights to model in Python.</span>
 
 The other challenge I had was finding a trustworthy weather dataset to add to my model. There are a bunch of weather APIs out there, and I was almost going to use a free one until I saw that the site was not secure. My partner is a cybersecurity engineer and has rightfully scared the bejeezus out of me regarding unsecure websites.
 
 After doing more research, I found Visual Crossing Weather’s API to be secure and simple enough for my needs, although I had to pay for it since the free version only gave me 500 API requests a day. I was afraid of running into a lot of difficulties and bugs figuring out the API, but it wasn’t too bad, and I was able to get all the data through the API quickly. I remember working at D. E. Shaw & Co. and hearing about “API this and API that” from the developers I worked with, and I was always curious how to access data from one, but now I know. Through the Metis bootcamp, a lot of technology which I had only understood at a high level has been demystified as I learn how to use it myself.
 
 ![Guy raising his fist in the air on a cliff with a beautiful morning](https://images.unsplash.com/photo-1519834785169-98be25ec3f84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80)
+<span class="photo-credit">Photo by <a href="https://unsplash.com/@ianstauffer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ian Stauffer</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 
 ## Conclusion
 I hope to revisit this project someday since there are a number of things I could do to expand on it: I can scale up my model to incorporate the entire 2015 flights dataset (will probably use PySpark or Dask to do the large-scale data processing), improve my F1 score by doing additional feature engineering like seeing if earlier flight delays affect later flights, and make a simple Flask to predict flight delay probabilities based on a user’s flight information.
