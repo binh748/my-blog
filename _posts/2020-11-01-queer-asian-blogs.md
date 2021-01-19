@@ -34,7 +34,7 @@ I discovered a surprising result from my analysis: the sentiment scores for each
 
 ![All sentiment trend graph](https://user-images.githubusercontent.com/62628676/100012330-16c62100-2da1-11eb-97e1-1fb9143319d2.png)
 ![sentiment trend by topic](https://user-images.githubusercontent.com/62628676/100010363-27c16300-2d9e-11eb-8919-455b522ac64b.png)
-<span class="caption">You can see the upward trend in sentiment scores, with the last section being the most positive. This trend is more pronounced in certain topics than others: for example, in the identity topic, you can see a sharp increase in the sentiment score at the end. </span>
+<span class="caption">You can see the upward trend in sentiment scores, with the last section being the most positive. This trend is more pronounced in certain topics than others: for example, in the identity topic, you can see a sharp increase in the sentiment score at the end.</span>
 
 I think this finding points to the resiliency of the writers and perhaps to the community as a whole, that despite the hardships they faced, many hold hope for a better tomorrow.
 
@@ -52,6 +52,9 @@ For this project, I wanted to up my data visualization game by making an interac
 Figuring out how to customize the tooltip took some time as I had to pour through the documentation and get familiar with Plotly’s syntax. (A lot of coding is reading through documentation!). A nice thing is that as I read through more and more documentation of various packages, I get faster at finding the information I need. :smile:
 
 One small frustration I had with Plotly was that it doesn’t allow you to change the location of the x-axis and y-axis labels unlike Seaborn and Matplotlib. I like my x-axis and y-axis labels to look like the below figure since I learned from Metis instructor Alice Zhao that for English-readers, we first read the left-most text; moreover, vertical text, which is how y-axis labels are usually displayed, is difficult to read. I totally agree. No one wants to turn their head to read text, lest they want a stiff neck. Maybe one day Plotly will add such functionality, but until then, I’ll just cry a little inside whenever I see my vertical y-axis labels on Plotly.
+
+![alice-zhao-data-viz-example](https://user-images.githubusercontent.com/62628676/104978710-7ff89800-59d0-11eb-8b82-e7f6fc449aab.png)
+<span class="caption">This is how x-axis and y-axis labels should be positioned and oriented for easy reading. Visualization from <a href="https://www.thisismetis.com/">Metis data science bootcamp</a>.</span>
 
 My other visualization challenge was figuring out how to create a sentiment map where color-coded squares represent the sentiment trend of a blog post. The color-coded squares would be ordered top-down, left-right to follow a blog post's sentence order. Some quick searching showed me that no native plot exists, so I had to get creative. I read before that a data scientist is supposed to be a hacker: they should have good enough programming skills to put together whatever they need, be it an app, visualization, or website, even if it may not be production quality.
 
