@@ -12,7 +12,7 @@ I completed the [Metis](https://www.thisismetis.com/) NYC data science bootcamp 
 
 I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in humanities.
 
-[Check out my resume.](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume2.0.pdf)
+[Check out my resume.](https://github.com/binh748/resume/blob/main/Binh-Hoang-Resume.pdf)
 
 ## What do I enjoy outside of data science?
 
