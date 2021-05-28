@@ -16,7 +16,11 @@ I graduated from [Yale University](https://yalecollege.yale.edu/) with a B.A. in
 
 ## What do I enjoy outside of data science?
 
-My favorite anime is [Stars Align (星合の空)](https://myanimelist.net/anime/37972/Hoshiai_no_Sora), and I hope there will be a season 2. I also recently finished the anime [Kemono Jihen (怪物事変)](https://myanimelist.net/anime/40908/Kemono_Jihen) and really hoping there will be a season 2 for that as well. Where are the season 2s for my favorite anime :cry:? 
+Current anime I'm watching: [To Your Eternity](https://myanimelist.net/anime/41025/Fumetsu_no_Anata_e). It's incredible.
+
+I love anime so much that I started a #anime Slack channel at work, and it's incredibly popular.
+
+My favorite anime is [Stars Align (星合の空)](https://myanimelist.net/anime/37972/Hoshiai_no_Sora), and I hope there will be a season 2. I also recently finished the anime [Kemono Jihen (怪物事変)](https://myanimelist.net/anime/40908/Kemono_Jihen) and am really hoping there will be a season 2 for that as well. Where are the season 2s for my favorite anime :cry:? 
 
 Right now, I'm learning Japanese using japanesepod101.com and also trying to keep up my Vietnamese. I hope to one day learn Chinese, too. ^-^
 
