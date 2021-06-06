@@ -4,9 +4,9 @@ title: "A little about me"
 author_profile: true
 layout: archive
 ---
-Hello! I'm Binh (he/him). I'm working to become the best data scientist I can be.
+Hello! I'm Binh (he/him). I'm working to become the best data professional I can be.
 
-I'm currently a Data Analyst in the data team at [DailyPay](https://www.dailypay.com/). DailyPay is growing fast, so if you're interested in one of [the many job openings](https://boards.greenhouse.io/dailypayinc), feel free to reach out.  
+I'm currently a Data Analyst in the Data team at [DailyPay](https://www.dailypay.com/). DailyPay is growing fast, so if you're interested in one of [the many job openings](https://boards.greenhouse.io/dailypayinc), feel free to reach out.  
 
 I completed the [Metis](https://www.thisismetis.com/) NYC data science bootcamp in summer 2020. Before Metis, I worked on the trading floor of [D. E. Shaw & Co.](https://www.deshaw.com/) as a member of the portfolio financing team.
 

@@ -28,7 +28,7 @@ What I recently found out is Snowflake offers a [free 30-day trial](https://sign
 In this post, I'll show you a couple cool Snowflake SQL things that you can't do in PostgreSQL/MySQL.  
 
 # QUALIFY
-The first SQL dialect I ever learned was PostgreSQL and that's because PostgreSQL was what was taught in my [Metis data science bootcamp](https://www.thisismetis.com/). I later learned MySQL when I started practicing SQL on LeetCode, and that's only because LeetCode doesn't offer PostgreSQL (:sad:). Between MySQL and PostgreSQL, PostgreSQL is definitely more powerful and popular these days. Then I tried Snowflake SQL, and Snowflake SQL is even better!
+The first SQL dialect I ever learned was PostgreSQL and that's because PostgreSQL was what was taught in my [Metis data science bootcamp](https://www.thisismetis.com/). I later learned MySQL when I started practicing SQL on LeetCode, and that's only because LeetCode doesn't offer PostgreSQL. Between MySQL and PostgreSQL, PostgreSQL is definitely more powerful and popular these days. Then I tried Snowflake SQL, and Snowflake SQL is even better!
 
 Let's look at the below employee table together. I created this table in Snowflake within minutes by defining the table columns and uploading a CSV file with dummy data. (I was really hungry when I created the dummy data, hence the food-based names.)
 
@@ -182,4 +182,4 @@ I hope this post helps you write more idiomatic and concise Snowflake SQL—it'l
 ![Young girl practicing coding on iPad](https://images.unsplash.com/photo-1599666505327-7758b44a9985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2850&q=80)
 <span class="photo-credit">Photo by <a href="https://unsplash.com/@kellysikkema">Kelly Sikkema</a> on <a href="https://unsplash.com/">Unsplash</a></span>
 
-Okay, for my next blog post, I plan on writing about LATERAL JOINs since I mentioned they tend to scare people. Let's make them less scary, for you and me lol.
+Okay, for my next blog post, I plan on writing about LATERAL JOINs since I mentioned they tend to scare people. Let's make them less scary, for my sake's and yours. :sweat_smile:
