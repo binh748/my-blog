@@ -26,5 +26,5 @@ In this post, I want to reflect on the valuable lessons I’ve learned in my fir
 
 I hope these valuable lessons I learned in my first year as a data analyst at DailyPay can help you on your data journey. Until next time! 
 
-![Woman leading meeting using colorful sticky notes ](https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
-<span class="photo-credit">Photo by <a href="https://unsplash.com/@jasongoodman_youxventures">Jason Goodman</a> on <a href="https://unsplash.com/">Unsplash</a></span>
+![Aeriel view of New York Citi Financil District](https://images.unsplash.com/photo-1499566727020-881da110a0b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80)
+<span class="photo-credit">Photo by <a href="https://unsplash.com/@jacobybrandon">Brandon Jacoby</a> on <a href="https://unsplash.com/">Unsplash</a></span>
